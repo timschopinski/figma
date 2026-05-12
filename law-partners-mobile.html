@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law & Partners – Kancelaria Prawna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#0D1B3E', light: '#1A2D5A', dark: '#080F22' },
+            gold:  { DEFAULT: '#C9A84C', light: '#DFC278', dark: '#A8863A' },
+            cream: { DEFAULT: '#F8F5EF', dark: '#EDE8DE' },
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans:  ['Jost', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* Mobile frame: 375px centered */
+    body {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 24px 0;
+    }
+    .phone-frame {
+      width: 375px;
+      background: #F8F5EF;
+      overflow-x: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    }
+
+    /* Gold divider */
+    .divider-gold {
+      width: 48px;
+      height: 2px;
+      background: #C9A84C;
+      display: block;
+    }
+
+    /* Subtle noise overlay */
+    .noise::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease forwards; }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.30s; }
+    .delay-3 { animation-delay: 0.45s; }
+
+    /* Service card hover */
+    .service-card {
+      border-left: 2px solid transparent;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .service-card:hover {
+      border-left-color: #C9A84C;
+      background: #F0EBE0;
+    }
+
+    /* FAQ accordion */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] summary .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.25s ease; }
+
+    /* Input focus */
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #C9A84C;
+      box-shadow: 0 0 0 2px rgba(201,168,76,0.18);
+    }
+  </style>
+</head>
+<body>
+<div class="phone-frame">
+
+  <!-- ================================================
+       NAV
+  ================================================ -->
+  <nav class="bg-navy sticky top-0 z-50 px-5 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-gold font-serif text-xl font-bold tracking-wide">L&amp;P</span>
+      <span class="text-cream/70 font-sans text-xs tracking-widest uppercase">Law &amp; Partners</span>
+    </div>
+    <button class="flex flex-col gap-1.5 p-1" aria-label="Menu">
+      <span class="block w-6 h-px bg-gold"></span>
+      <span class="block w-4 h-px bg-gold/60"></span>
+      <span class="block w-6 h-px bg-gold"></span>
+    </button>
+  </nav>
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="relative bg-navy noise overflow-hidden" style="min-height:480px;">
+    <!-- Decorative circle -->
+    <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full border border-gold/10 opacity-60"></div>
+    <div class="absolute top-8 -right-8 w-40 h-40 rounded-full border border-gold/15"></div>
+
+    <div class="relative z-10 px-6 pt-14 pb-16">
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-3 mb-6 fade-up">
+        <span class="divider-gold"></span>
+        <span class="text-gold font-sans text-xs tracking-widest uppercase">Kancelaria Prawna</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-serif text-cream text-4xl leading-tight font-bold mb-4 fade-up delay-1">
+        Prawo.<br/>
+        <span class="italic text-gold">Precyzja.</span><br/>
+        Skuteczność.
+      </h1>
+
+      <p class="font-sans text-cream/65 text-sm leading-relaxed mb-8 fade-up delay-2">
+        Obsługujemy klientów indywidualnych i przedsiębiorstwa. Doświadczeni prawnicy, jasna komunikacja, mierzalne efekty.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col gap-3 fade-up delay-3">
+        <a href="#kontakt"
+           class="bg-gold text-navy font-sans font-semibold text-sm tracking-wide uppercase text-center py-4 px-6 transition hover:bg-gold-dark">
+          Skonsultuj sprawę
+        </a>
+        <a href="#uslugi"
+           class="border border-gold/40 text-gold font-sans font-medium text-sm tracking-wide uppercase text-center py-3.5 px-6 transition hover:border-gold hover:bg-gold/5">
+          Poznaj ofertę
+        </a>
+      </div>
+
+      <!-- Trust bar -->
+      <div class="mt-10 grid grid-cols-3 gap-3 pt-8 border-t border-white/10">
+        <div class="text-center">
+          <p class="font-serif text-gold text-2xl font-bold">18+</p>
+          <p class="font-sans text-cream/50 text-xs mt-0.5">lat doświadczenia</p>
+        </div>
+        <div class="text-center">
+          <p class="font-serif text-gold text-2xl font-bold">1400</p>
+          <p class="font-sans text-cream/50 text-xs mt-0.5">spraw rocznie</p>
+        </div>
+        <div class="text-center">
+          <p class="font-serif text-gold text-2xl font-bold">98%</p>
+          <p class="font-sans text-cream/50 text-xs mt-0.5">zadowolonych</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       O NAS (short intro)
+  ================================================ -->
+  <section class="bg-cream-dark px-6 py-12">
+    <span class="divider-gold mb-4 block"></span>
+    <p class="font-sans text-navy/50 text-xs tracking-widest uppercase mb-3">Kim jesteśmy</p>
+    <h2 class="font-serif text-navy text-3xl font-bold leading-snug mb-4">
+      Wiarygodność budowana latami
+    </h2>
+    <p class="font-sans text-navy/65 text-sm leading-relaxed">
+      Law &amp; Partners to kancelaria z siedzibą w Warszawie, specjalizująca się w obsłudze prawnej firm oraz klientów indywidualnych. Nasz zespół łączy doświadczenie procesowe z głęboką wiedzą branżową.
+    </p>
+    <!-- Team avatars placeholder -->
+    <div class="flex items-center gap-3 mt-7">
+      <div class="flex -space-x-3">
+        <div class="w-10 h-10 rounded-full bg-navy/20 border-2 border-cream flex items-center justify-center">
+          <span class="font-serif text-navy text-sm font-bold">AK</span>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-gold/20 border-2 border-cream flex items-center justify-center">
+          <span class="font-serif text-navy text-sm font-bold">MR</span>
+        </div>
+        <div class="w-10 h-10 rounded-full bg-navy/10 border-2 border-cream flex items-center justify-center">
+          <span class="font-serif text-navy text-sm font-bold">PW</span>
+        </div>
+      </div>
+      <p class="font-sans text-navy/60 text-xs leading-tight">Zespół 8 radców<br/>i adwokatów</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       USLUGI
+  ================================================ -->
+  <section id="uslugi" class="bg-cream px-6 py-12">
+    <span class="divider-gold mb-4 block"></span>
+    <p class="font-sans text-navy/50 text-xs tracking-widest uppercase mb-3">Oferta</p>
+    <h2 class="font-serif text-navy text-3xl font-bold leading-snug mb-8">
+      Zakres usług
+    </h2>
+
+    <div class="flex flex-col gap-3">
+
+      <!-- Service 1 -->
+      <div class="service-card bg-cream-dark px-5 py-5">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1">01</p>
+            <h3 class="font-serif text-navy text-lg font-semibold leading-tight">Prawo gospodarcze<br/>i korporacyjne</h3>
+          </div>
+          <span class="text-gold/50 text-2xl mt-1">&#8599;</span>
+        </div>
+        <p class="font-sans text-navy/55 text-xs leading-relaxed mt-3">
+          Zakładanie i restrukturyzacja spółek, umowy handlowe, due diligence, fuzje i przejęcia.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card bg-cream-dark px-5 py-5">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1">02</p>
+            <h3 class="font-serif text-navy text-lg font-semibold leading-tight">Prawo pracy</h3>
+          </div>
+          <span class="text-gold/50 text-2xl mt-1">&#8599;</span>
+        </div>
+        <p class="font-sans text-navy/55 text-xs leading-relaxed mt-3">
+          Reprezentacja pracodawców i pracowników, regulaminy pracy, spory zbiorowe.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card bg-cream-dark px-5 py-5">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1">03</p>
+            <h3 class="font-serif text-navy text-lg font-semibold leading-tight">Prawo cywilne<br/>i procesowe</h3>
+          </div>
+          <span class="text-gold/50 text-2xl mt-1">&#8599;</span>
+        </div>
+        <p class="font-sans text-navy/55 text-xs leading-relaxed mt-3">
+          Odszkodowania, windykacja, sprawy spadkowe, reprezentacja przed sądem.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card bg-cream-dark px-5 py-5">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1">04</p>
+            <h3 class="font-serif text-navy text-lg font-semibold leading-tight">Prawo nieruchomości</h3>
+          </div>
+          <span class="text-gold/50 text-2xl mt-1">&#8599;</span>
+        </div>
+        <p class="font-sans text-navy/55 text-xs leading-relaxed mt-3">
+          Transakcje, badanie stanu prawnego, umowy deweloperskie, spory sąsiedzkie.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card bg-cream-dark px-5 py-5">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1">05</p>
+            <h3 class="font-serif text-navy text-lg font-semibold leading-tight">RODO i ochrona<br/>danych osobowych</h3>
+          </div>
+          <span class="text-gold/50 text-2xl mt-1">&#8599;</span>
+        </div>
+        <p class="font-sans text-navy/55 text-xs leading-relaxed mt-3">
+          Audyty, polityki prywatności, wsparcie w przypadku naruszeń danych.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       PORTFOLIO / CASE STUDIES
+  ================================================ -->
+  <section id="portfolio" class="bg-navy px-6 py-12">
+    <span class="divider-gold mb-4 block"></span>
+    <p class="font-sans text-gold/60 text-xs tracking-widest uppercase mb-3">Doświadczenie</p>
+    <h2 class="font-serif text-cream text-3xl font-bold leading-snug mb-8">
+      Wybrane sprawy
+    </h2>
+
+    <!-- Case 1 -->
+    <div class="mb-6 pb-6 border-b border-white/10">
+      <div class="flex items-start justify-between mb-2">
+        <span class="font-sans text-gold text-xs tracking-widest uppercase">Prawo gospodarcze</span>
+        <span class="font-sans text-cream/30 text-xs">2024</span>
+      </div>
+      <h3 class="font-serif text-cream text-xl font-semibold leading-snug mb-2">
+        Restrukturyzacja grupy kapitałowej
+      </h3>
+      <p class="font-sans text-cream/55 text-xs leading-relaxed">
+        Kompleksowa obsługa prawna restrukturyzacji holdingu z 7 spółkami. Optymalizacja struktury właścicielskiej i minimalizacja ryzyk podatkowych.
+      </p>
+      <div class="mt-3 flex gap-2">
+        <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Holding</span>
+        <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">M&amp;A</span>
+      </div>
+    </div>
+
+    <!-- Case 2 -->
+    <div class="mb-6 pb-6 border-b border-white/10">
+      <div class="flex items-start justify-between mb-2">
+        <span class="font-sans text-gold text-xs tracking-widest uppercase">Prawo pracy</span>
+        <span class="font-sans text-cream/30 text-xs">2023</span>
+      </div>
+      <h3 class="font-serif text-cream text-xl font-semibold leading-snug mb-2">
+        Spór zbiorowy – zwolnienia grupowe
+      </h3>
+      <p class="font-sans text-cream/55 text-xs leading-relaxed">
+        Reprezentacja pracodawcy w negocjacjach ze związkami zawodowymi. Zakończenie sporu ugodą korzystną dla obu stron.
+      </p>
+      <div class="mt-3 flex gap-2">
+        <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Pracownicy</span>
+        <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Ugoda</span>
+      </div>
+    </div>
+
+    <!-- Case 3 -->
+    <div>
+      <div class="flex items-start justify-between mb-2">
+        <span class="font-sans text-gold text-xs tracking-widest uppercase">Prawo cywilne</span>
+        <span class="font-sans text-cream/30 text-xs">2023</span>
+      </div>
+      <h3 class="font-serif text-cream text-xl font-semibold leading-snug mb-2">
+        Odszkodowanie po wypadku komunikacyjnym
+      </h3>
+      <p class="font-sans text-cream/55 text-xs leading-relaxed">
+        Uzyskanie odszkodowania w wysokości 480 000 zł dla klienta indywidualnego. Sprawa zakończona w 14 miesięcy.
+      </p>
+      <div class="mt-3 flex gap-2">
+        <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Klient indywidualny</span>
+        <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Wygrana</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       TESTIMONIALS
+  ================================================ -->
+  <section class="bg-cream-dark px-6 py-12">
+    <span class="divider-gold mb-4 block"></span>
+    <p class="font-sans text-navy/50 text-xs tracking-widest uppercase mb-3">Opinie</p>
+    <h2 class="font-serif text-navy text-3xl font-bold leading-snug mb-8">
+      Co mówią klienci
+    </h2>
+
+    <!-- Testimonial 1 -->
+    <div class="bg-cream px-5 py-6 mb-4">
+      <div class="flex gap-1 mb-3">
+        <span class="text-gold text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <p class="font-serif text-navy text-base italic leading-relaxed mb-4">
+        "Profesjonalne podejście, pełna transparentność kosztów i szybka komunikacja. Polecam bez zastrzeżeń."
+      </p>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-navy/20 flex items-center justify-center">
+          <span class="font-serif text-navy text-xs font-bold">TN</span>
+        </div>
+        <div>
+          <p class="font-sans text-navy font-semibold text-xs">Tomasz Nowak</p>
+          <p class="font-sans text-navy/45 text-xs">CEO, Nowak Group Sp. z o.o.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="bg-cream px-5 py-6">
+      <div class="flex gap-1 mb-3">
+        <span class="text-gold text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <p class="font-serif text-navy text-base italic leading-relaxed mb-4">
+        "Kancelaria pomogła mi wygrać sprawę, którą uważałem za przegraną. Skuteczność i zaangażowanie na najwyższym poziomie."
+      </p>
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center">
+          <span class="font-serif text-navy text-xs font-bold">AW</span>
+        </div>
+        <div>
+          <p class="font-sans text-navy font-semibold text-xs">Anna Wiśniewska</p>
+          <p class="font-sans text-navy/45 text-xs">Klient indywidualny</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FAQ
+  ================================================ -->
+  <section id="faq" class="bg-cream px-6 py-12">
+    <span class="divider-gold mb-4 block"></span>
+    <p class="font-sans text-navy/50 text-xs tracking-widest uppercase mb-3">FAQ</p>
+    <h2 class="font-serif text-navy text-3xl font-bold leading-snug mb-8">
+      Najczęstsze pytania
+    </h2>
+
+    <div class="flex flex-col gap-3">
+
+      <details class="bg-cream-dark group">
+        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer">
+          <span class="font-sans text-navy font-medium text-sm pr-4">Ile kosztuje pierwsza konsultacja?</span>
+          <span class="faq-icon text-gold text-xl font-light shrink-0">+</span>
+        </summary>
+        <p class="font-sans text-navy/60 text-xs leading-relaxed px-5 pb-4">
+          Pierwsza konsultacja trwa 30–60 minut i kosztuje 300 zł netto. W jej trakcie oceniamy sprawę i przedstawiamy możliwe rozwiązania. Koszt konsultacji jest zaliczany na poczet wynagrodzenia przy zleceniu sprawy.
+        </p>
+      </details>
+
+      <details class="bg-cream-dark group">
+        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer">
+          <span class="font-sans text-navy font-medium text-sm pr-4">Jak szybko otrzymam odpowiedź po przesłaniu formularza?</span>
+          <span class="faq-icon text-gold text-xl font-light shrink-0">+</span>
+        </summary>
+        <p class="font-sans text-navy/60 text-xs leading-relaxed px-5 pb-4">
+          Gwarantujemy kontakt w ciągu 24 godzin roboczych od otrzymania wiadomości. W pilnych sprawach prosimy o bezpośredni kontakt telefoniczny.
+        </p>
+      </details>
+
+      <details class="bg-cream-dark group">
+        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer">
+          <span class="font-sans text-navy font-medium text-sm pr-4">Czy obsługujecie klientów spoza Warszawy?</span>
+          <span class="faq-icon text-gold text-xl font-light shrink-0">+</span>
+        </summary>
+        <p class="font-sans text-navy/60 text-xs leading-relaxed px-5 pb-4">
+          Tak. Prowadzimy sprawy na terenie całej Polski. Konsultacje online (Teams / Zoom) są standardową formą kontaktu dla klientów z innych miast.
+        </p>
+      </details>
+
+      <details class="bg-cream-dark group">
+        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer">
+          <span class="font-sans text-navy font-medium text-sm pr-4">Jakie są formy wynagrodzenia?</span>
+          <span class="faq-icon text-gold text-xl font-light shrink-0">+</span>
+        </summary>
+        <p class="font-sans text-navy/60 text-xs leading-relaxed px-5 pb-4">
+          Oferujemy ryczałt miesięczny (abonament) dla firm, stawkę godzinową oraz wynagrodzenie success fee w sprawach odszkodowawczych. Model rozliczenia ustalamy indywidualnie.
+        </p>
+      </details>
+
+      <details class="bg-cream-dark group">
+        <summary class="flex items-center justify-between px-5 py-4 cursor-pointer">
+          <span class="font-sans text-navy font-medium text-sm pr-4">Czy zapewniacie poufność sprawy?</span>
+          <span class="faq-icon text-gold text-xl font-light shrink-0">+</span>
+        </summary>
+        <p class="font-sans text-navy/60 text-xs leading-relaxed px-5 pb-4">
+          Absolutnie. Tajemnica zawodowa radcy prawnego i adwokata jest chroniona przez prawo i stanowi fundament naszej działalności.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT FORM
+  ================================================ -->
+  <section id="kontakt" class="bg-navy px-6 py-12 relative noise overflow-hidden">
+    <!-- Decorative element -->
+    <div class="absolute -bottom-20 -left-20 w-56 h-56 rounded-full border border-gold/8"></div>
+
+    <span class="divider-gold mb-4 block relative z-10"></span>
+    <p class="font-sans text-gold/60 text-xs tracking-widest uppercase mb-3 relative z-10">Kontakt</p>
+    <h2 class="font-serif text-cream text-3xl font-bold leading-snug mb-2 relative z-10">
+      Skonsultuj swoją sprawę
+    </h2>
+    <p class="font-sans text-cream/50 text-sm mb-8 relative z-10">
+      Odpowiemy w ciągu 24 godzin roboczych.
+    </p>
+
+    <!-- Quick contact -->
+    <div class="flex flex-col gap-3 mb-8 relative z-10">
+      <a href="tel:+48221234567" class="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-3">
+        <span class="text-gold">&#9742;</span>
+        <span class="font-sans text-cream/80 text-sm">+48 22 123 45 67</span>
+      </a>
+      <a href="mailto:kontakt@lawandpartners.pl" class="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-3">
+        <span class="text-gold">@</span>
+        <span class="font-sans text-cream/80 text-sm">kontakt@lawandpartners.pl</span>
+      </a>
+    </div>
+
+    <!-- Form -->
+    <div class="relative z-10">
+      <div class="flex flex-col gap-4">
+
+        <div>
+          <label class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">Imię i nazwisko *</label>
+          <input type="text" placeholder="Jan Kowalski"
+            class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition" />
+        </div>
+
+        <div>
+          <label class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">E-mail *</label>
+          <input type="email" placeholder="jan@firma.pl"
+            class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition" />
+        </div>
+
+        <div>
+          <label class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">Telefon</label>
+          <input type="tel" placeholder="+48 600 000 000"
+            class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition" />
+        </div>
+
+        <div>
+          <label class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">Dziedzina prawa *</label>
+          <select class="w-full bg-navy border border-white/15 text-cream font-sans text-sm px-4 py-3 transition appearance-none">
+            <option value="" disabled selected class="text-cream/40">Wybierz...</option>
+            <option>Prawo gospodarcze i korporacyjne</option>
+            <option>Prawo pracy</option>
+            <option>Prawo cywilne i procesowe</option>
+            <option>Prawo nieruchomości</option>
+            <option>RODO i ochrona danych</option>
+            <option>Inne</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">Opis sprawy *</label>
+          <textarea rows="4" placeholder="Krótko opisz swoją sytuację..."
+            class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition resize-none"></textarea>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="rodo" class="mt-0.5 accent-gold" />
+          <label for="rodo" class="font-sans text-cream/45 text-xs leading-relaxed">
+            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z Polityką Prywatności kancelarii.
+          </label>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-gold text-navy font-sans font-semibold text-sm tracking-wide uppercase py-4 mt-2 transition hover:bg-gold-dark active:scale-98">
+          Wyślij zapytanie
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="bg-navy-dark px-6 py-10 border-t border-white/10">
+    <div class="flex items-center gap-2 mb-6">
+      <span class="text-gold font-serif text-2xl font-bold">L&amp;P</span>
+      <div>
+        <p class="font-serif text-cream text-sm font-semibold leading-none">Law &amp; Partners</p>
+        <p class="font-sans text-cream/40 text-xs">Kancelaria Prawna</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2 mb-6">
+      <p class="font-sans text-cream/50 text-xs">ul. Nowy Świat 18/3, 00-001 Warszawa</p>
+      <p class="font-sans text-cream/50 text-xs">pon. – pt. 9:00 – 18:00</p>
+    </div>
+
+    <div class="flex gap-5 mb-8">
+      <a href="#uslugi" class="font-sans text-cream/50 text-xs hover:text-gold transition">Usługi</a>
+      <a href="#portfolio" class="font-sans text-cream/50 text-xs hover:text-gold transition">Portfolio</a>
+      <a href="#faq" class="font-sans text-cream/50 text-xs hover:text-gold transition">FAQ</a>
+      <a href="#kontakt" class="font-sans text-cream/50 text-xs hover:text-gold transition">Kontakt</a>
+    </div>
+
+    <span class="divider-gold mb-5 block"></span>
+
+    <div class="flex items-center justify-between">
+      <p class="font-sans text-cream/30 text-xs">&copy; 2025 Law &amp; Partners</p>
+      <a href="#" class="font-sans text-cream/30 text-xs hover:text-gold transition">Polityka prywatności</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
