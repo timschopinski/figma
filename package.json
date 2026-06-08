@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npx serve public -l 3000\"",
     "dev": "tailwindcss -i ./css/input.css -o ./public/css/style.css --watch",
-    "build": "tailwindcss -i ./css/input.css -o ./public/css/style.css --minify && cp ./js/main.js ./public/js/main.js && cp ./index.html ./public/index.html"
+    "build": "mkdir -p public/css public/js && tailwindcss -i ./css/input.css -o ./public/css/style.css --minify && cp ./js/main.js ./public/js/main.js && cp ./index.html ./public/index.html"
   },
   "devDependencies": {
     "concurrently": "^10.0.3",
