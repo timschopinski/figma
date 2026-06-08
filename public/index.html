@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Law & Partners – Kancelaria Prawna Warszawa</title>
+  <meta name="description" content="Law & Partners – kancelaria prawna w Warszawie. Prawo gospodarcze, pracownicze, cywilne i nieruchomości. 18 lat doświadczenia, 98% zadowolonych klientów." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-cream font-sans antialiased">
+
+<!-- ================================================
+     HEADER / NAV
+================================================ -->
+<header class="bg-navy sticky top-0 z-50">
+  <nav
+    class="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between"
+    aria-label="Nawigacja główna"
+  >
+    <a href="#" class="flex items-center gap-2" aria-label="Law & Partners – strona główna">
+      <span class="text-gold font-serif text-xl font-bold tracking-wide" aria-hidden="true">L&amp;P</span>
+      <span class="text-cream/70 font-sans text-xs tracking-widest uppercase">Law &amp; Partners</span>
+    </a>
+
+    <!-- Desktop nav (hidden on mobile) -->
+    <ul class="hidden lg:flex items-center gap-8 list-none m-0 p-0">
+      <li><a href="#uslugi"    class="font-sans text-cream/70 text-sm hover:text-gold transition">Usługi</a></li>
+      <li><a href="#portfolio" class="font-sans text-cream/70 text-sm hover:text-gold transition">Portfolio</a></li>
+      <li><a href="#opinie"    class="font-sans text-cream/70 text-sm hover:text-gold transition">Opinie</a></li>
+      <li><a href="#faq"       class="font-sans text-cream/70 text-sm hover:text-gold transition">FAQ</a></li>
+      <li>
+        <a href="#kontakt" class="btn-primary py-2.5 px-5">Kontakt</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger (visible on mobile only) -->
+    <button
+      id="nav-toggle"
+      class="lg:hidden flex flex-col gap-1.5 p-2"
+      aria-label="Otwórz menu nawigacji"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="block w-6 h-px bg-gold transition-all duration-300"></span>
+      <span class="block w-4 h-px bg-gold/60 transition-all duration-300"></span>
+      <span class="block w-6 h-px bg-gold transition-all duration-300"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden bg-navy-dark border-t border-white/10"
+  >
+    <ul class="max-w-7xl mx-auto px-5 py-5 flex flex-col gap-3 list-none m-0">
+      <li><a href="#uslugi"    class="font-sans text-cream/70 text-sm hover:text-gold transition block py-1">Usługi</a></li>
+      <li><a href="#portfolio" class="font-sans text-cream/70 text-sm hover:text-gold transition block py-1">Portfolio</a></li>
+      <li><a href="#opinie"    class="font-sans text-cream/70 text-sm hover:text-gold transition block py-1">Opinie</a></li>
+      <li><a href="#faq"       class="font-sans text-cream/70 text-sm hover:text-gold transition block py-1">FAQ</a></li>
+      <li class="pt-2">
+        <a href="#kontakt" class="btn-primary inline-block">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section id="hero" class="relative bg-navy overflow-hidden">
+    <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full border border-gold/10 opacity-60" aria-hidden="true"></div>
+    <div class="absolute top-8 -right-8 w-40 h-40 rounded-full border border-gold/15" aria-hidden="true"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full border border-gold/5 hidden lg:block" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-16 lg:pt-24 lg:pb-28">
+      <div class="lg:flex lg:items-center lg:gap-16">
+
+        <!-- Left: text -->
+        <div class="lg:flex-1">
+          <div class="flex items-center gap-3 mb-6 fade-up">
+            <span class="divider-gold" aria-hidden="true"></span>
+            <span class="section-label text-gold">Kancelaria Prawna</span>
+          </div>
+
+          <h1 class="font-serif text-cream text-4xl lg:text-6xl leading-tight font-bold mb-5 fade-up delay-1">
+            Prawo.<br />
+            <em class="italic text-gold">Precyzja.</em><br />
+            Skuteczność.
+          </h1>
+
+          <p class="font-sans text-cream/65 text-sm lg:text-base leading-relaxed mb-8 max-w-lg fade-up delay-2">
+            Obsługujemy klientów indywidualnych i przedsiębiorstwa. Doświadczeni prawnicy, jasna komunikacja, mierzalne efekty.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 fade-up delay-3">
+            <a href="#kontakt" class="btn-primary lg:flex-shrink-0">Skonsultuj sprawę</a>
+            <a href="#uslugi"  class="btn-outline  lg:flex-shrink-0">Poznaj ofertę</a>
+          </div>
+        </div>
+
+        <!-- Right: trust stats -->
+        <div class="mt-10 lg:mt-0 lg:flex-shrink-0 lg:w-64">
+          <div class="grid grid-cols-3 lg:grid-cols-1 lg:gap-8 gap-3 pt-8 lg:pt-0 border-t lg:border-t-0 border-white/10">
+            <div class="text-center lg:text-left">
+              <p class="font-serif text-gold text-2xl lg:text-5xl font-bold">18+</p>
+              <p class="font-sans text-cream/50 text-xs mt-1">lat doświadczenia</p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p class="font-serif text-gold text-2xl lg:text-5xl font-bold">1400</p>
+              <p class="font-sans text-cream/50 text-xs mt-1">spraw rocznie</p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p class="font-serif text-gold text-2xl lg:text-5xl font-bold">98%</p>
+              <p class="font-sans text-cream/50 text-xs mt-1">zadowolonych klientów</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       O NAS
+  ================================================ -->
+  <section id="o-nas" class="bg-cream-dark py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="lg:flex lg:gap-20 lg:items-center">
+
+        <div class="lg:flex-1">
+          <span class="divider-gold mb-4" aria-hidden="true"></span>
+          <p class="section-label text-navy/50 mb-3">Kim jesteśmy</p>
+          <h2 class="font-serif text-navy text-3xl lg:text-4xl font-bold leading-snug mb-5">
+            Wiarygodność budowana latami
+          </h2>
+          <p class="font-sans text-navy/65 text-sm lg:text-base leading-relaxed max-w-xl">
+            Law &amp; Partners to kancelaria z siedzibą w Warszawie, specjalizująca się w obsłudze prawnej
+            firm oraz klientów indywidualnych. Nasz zespół łączy doświadczenie procesowe z głęboką wiedzą branżową.
+          </p>
+        </div>
+
+        <div class="mt-8 lg:mt-0 lg:flex-shrink-0">
+          <div class="flex items-center gap-4">
+            <div class="flex -space-x-3" aria-label="Zdjęcia członków zespołu">
+              <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-navy/20 border-2 border-cream flex items-center justify-center">
+                <span class="font-serif text-navy text-sm font-bold" aria-label="Adwokat AK">AK</span>
+              </div>
+              <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-gold/20 border-2 border-cream flex items-center justify-center">
+                <span class="font-serif text-navy text-sm font-bold" aria-label="Radca prawny MR">MR</span>
+              </div>
+              <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-navy/10 border-2 border-cream flex items-center justify-center">
+                <span class="font-serif text-navy text-sm font-bold" aria-label="Radca prawny PW">PW</span>
+              </div>
+            </div>
+            <p class="font-sans text-navy/60 text-xs leading-tight">Zespół 8 radców<br />i adwokatów</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       USŁUGI
+  ================================================ -->
+  <section id="uslugi" class="bg-cream py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <span class="divider-gold mb-4" aria-hidden="true"></span>
+      <p class="section-label text-navy/50 mb-3">Oferta</p>
+      <h2 class="font-serif text-navy text-3xl lg:text-4xl font-bold leading-snug mb-10">
+        Zakres usług
+      </h2>
+
+      <!-- Mobile: 1 column | Desktop: 2 columns (Grid – równe kolumny) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+
+        <article class="service-card">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1" aria-hidden="true">01</p>
+              <h3 class="font-serif text-navy text-xl font-semibold leading-tight">Prawo gospodarcze i korporacyjne</h3>
+            </div>
+            <span class="text-gold/50 text-2xl mt-1" aria-hidden="true">&#8599;</span>
+          </div>
+          <p class="font-sans text-navy/55 text-sm leading-relaxed mt-3">
+            Zakładanie i restrukturyzacja spółek, umowy handlowe, due diligence, fuzje i przejęcia.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1" aria-hidden="true">02</p>
+              <h3 class="font-serif text-navy text-xl font-semibold leading-tight">Prawo pracy</h3>
+            </div>
+            <span class="text-gold/50 text-2xl mt-1" aria-hidden="true">&#8599;</span>
+          </div>
+          <p class="font-sans text-navy/55 text-sm leading-relaxed mt-3">
+            Reprezentacja pracodawców i pracowników, regulaminy pracy, spory zbiorowe.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1" aria-hidden="true">03</p>
+              <h3 class="font-serif text-navy text-xl font-semibold leading-tight">Prawo cywilne i procesowe</h3>
+            </div>
+            <span class="text-gold/50 text-2xl mt-1" aria-hidden="true">&#8599;</span>
+          </div>
+          <p class="font-sans text-navy/55 text-sm leading-relaxed mt-3">
+            Odszkodowania, windykacja, sprawy spadkowe, reprezentacja przed sądem.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1" aria-hidden="true">04</p>
+              <h3 class="font-serif text-navy text-xl font-semibold leading-tight">Prawo nieruchomości</h3>
+            </div>
+            <span class="text-gold/50 text-2xl mt-1" aria-hidden="true">&#8599;</span>
+          </div>
+          <p class="font-sans text-navy/55 text-sm leading-relaxed mt-3">
+            Transakcje, badanie stanu prawnego, umowy deweloperskie, spory sąsiedzkie.
+          </p>
+        </article>
+
+        <article class="service-card lg:col-span-2">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="font-sans text-gold text-xs tracking-widest uppercase mb-1" aria-hidden="true">05</p>
+              <h3 class="font-serif text-navy text-xl font-semibold leading-tight">RODO i ochrona danych osobowych</h3>
+            </div>
+            <span class="text-gold/50 text-2xl mt-1" aria-hidden="true">&#8599;</span>
+          </div>
+          <p class="font-sans text-navy/55 text-sm leading-relaxed mt-3">
+            Audyty, polityki prywatności, wsparcie w przypadku naruszeń danych osobowych.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       PORTFOLIO / CASE STUDIES
+  ================================================ -->
+  <section id="portfolio" class="bg-navy py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <span class="divider-gold mb-4" aria-hidden="true"></span>
+      <p class="section-label text-gold/60 mb-3">Doświadczenie</p>
+      <h2 class="font-serif text-cream text-3xl lg:text-4xl font-bold leading-snug mb-10">
+        Wybrane sprawy
+      </h2>
+
+      <!-- Mobile: 1 column | Desktop: 3 columns (Grid) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-white/10">
+
+        <article class="bg-navy px-6 py-8">
+          <div class="flex items-start justify-between mb-3">
+            <span class="section-label text-gold">Prawo gospodarcze</span>
+            <time class="font-sans text-cream/30 text-xs" datetime="2024">2024</time>
+          </div>
+          <h3 class="font-serif text-cream text-xl font-semibold leading-snug mb-3">
+            Restrukturyzacja grupy kapitałowej
+          </h3>
+          <p class="font-sans text-cream/55 text-sm leading-relaxed mb-5">
+            Kompleksowa obsługa prawna restrukturyzacji holdingu z 7 spółkami. Optymalizacja
+            struktury właścicielskiej i minimalizacja ryzyk podatkowych.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Holding</span>
+            <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">M&amp;A</span>
+          </div>
+        </article>
+
+        <article class="bg-navy px-6 py-8">
+          <div class="flex items-start justify-between mb-3">
+            <span class="section-label text-gold">Prawo pracy</span>
+            <time class="font-sans text-cream/30 text-xs" datetime="2023">2023</time>
+          </div>
+          <h3 class="font-serif text-cream text-xl font-semibold leading-snug mb-3">
+            Spór zbiorowy – zwolnienia grupowe
+          </h3>
+          <p class="font-sans text-cream/55 text-sm leading-relaxed mb-5">
+            Reprezentacja pracodawcy w negocjacjach ze związkami zawodowymi. Zakończenie sporu
+            ugodą korzystną dla obu stron.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Pracownicy</span>
+            <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Ugoda</span>
+          </div>
+        </article>
+
+        <article class="bg-navy px-6 py-8">
+          <div class="flex items-start justify-between mb-3">
+            <span class="section-label text-gold">Prawo cywilne</span>
+            <time class="font-sans text-cream/30 text-xs" datetime="2023">2023</time>
+          </div>
+          <h3 class="font-serif text-cream text-xl font-semibold leading-snug mb-3">
+            Odszkodowanie po wypadku komunikacyjnym
+          </h3>
+          <p class="font-sans text-cream/55 text-sm leading-relaxed mb-5">
+            Uzyskanie odszkodowania w wysokości 480 000 zł dla klienta indywidualnego.
+            Sprawa zakończona w 14 miesięcy.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Klient indywidualny</span>
+            <span class="bg-gold/10 text-gold font-sans text-xs px-3 py-1">Wygrana</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       OPINIE / TESTIMONIALS
+  ================================================ -->
+  <section id="opinie" class="bg-cream-dark py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <span class="divider-gold mb-4" aria-hidden="true"></span>
+      <p class="section-label text-navy/50 mb-3">Opinie</p>
+      <h2 class="font-serif text-navy text-3xl lg:text-4xl font-bold leading-snug mb-10">
+        Co mówią klienci
+      </h2>
+
+      <!-- Mobile: 1 column | Desktop: 2 columns -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+        <article class="bg-cream px-6 py-7">
+          <div class="flex gap-1 mb-4" role="img" aria-label="Ocena: 5 gwiazdek">
+            <span class="text-gold text-sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <blockquote class="font-serif text-navy text-base lg:text-lg italic leading-relaxed mb-5">
+            "Profesjonalne podejście, pełna transparentność kosztów i szybka komunikacja. Polecam bez zastrzeżeń."
+          </blockquote>
+          <footer class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy/20 flex items-center justify-center shrink-0" aria-hidden="true">
+              <span class="font-serif text-navy text-xs font-bold">TN</span>
+            </div>
+            <div>
+              <p class="font-sans text-navy font-semibold text-sm">Tomasz Nowak</p>
+              <p class="font-sans text-navy/45 text-xs">CEO, Nowak Group Sp. z o.o.</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="bg-cream px-6 py-7">
+          <div class="flex gap-1 mb-4" role="img" aria-label="Ocena: 5 gwiazdek">
+            <span class="text-gold text-sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <blockquote class="font-serif text-navy text-base lg:text-lg italic leading-relaxed mb-5">
+            "Kancelaria pomogła mi wygrać sprawę, którą uważałam za przegraną. Skuteczność i zaangażowanie na najwyższym poziomie."
+          </blockquote>
+          <footer class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center shrink-0" aria-hidden="true">
+              <span class="font-serif text-navy text-xs font-bold">AW</span>
+            </div>
+            <div>
+              <p class="font-sans text-navy font-semibold text-sm">Anna Wiśniewska</p>
+              <p class="font-sans text-navy/45 text-xs">Klient indywidualny</p>
+            </div>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FAQ
+  ================================================ -->
+  <section id="faq" class="bg-cream py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <span class="divider-gold mb-4" aria-hidden="true"></span>
+      <p class="section-label text-navy/50 mb-3">FAQ</p>
+      <h2 class="font-serif text-navy text-3xl lg:text-4xl font-bold leading-snug mb-10">
+        Najczęstsze pytania
+      </h2>
+
+      <div class="max-w-3xl flex flex-col gap-3">
+
+        <details class="bg-cream-dark">
+          <summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none">
+            <span class="font-sans text-navy font-medium text-sm pr-4">Ile kosztuje pierwsza konsultacja?</span>
+            <span class="faq-icon text-gold text-xl font-light shrink-0" aria-hidden="true">+</span>
+          </summary>
+          <p class="font-sans text-navy/60 text-sm leading-relaxed px-5 pb-5">
+            Pierwsza konsultacja trwa 30–60 minut i kosztuje 300 zł netto. W jej trakcie oceniamy sprawę
+            i przedstawiamy możliwe rozwiązania. Koszt konsultacji jest zaliczany na poczet wynagrodzenia
+            przy zleceniu sprawy.
+          </p>
+        </details>
+
+        <details class="bg-cream-dark">
+          <summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none">
+            <span class="font-sans text-navy font-medium text-sm pr-4">Jak szybko otrzymam odpowiedź po przesłaniu formularza?</span>
+            <span class="faq-icon text-gold text-xl font-light shrink-0" aria-hidden="true">+</span>
+          </summary>
+          <p class="font-sans text-navy/60 text-sm leading-relaxed px-5 pb-5">
+            Gwarantujemy kontakt w ciągu 24 godzin roboczych od otrzymania wiadomości.
+            W pilnych sprawach prosimy o bezpośredni kontakt telefoniczny.
+          </p>
+        </details>
+
+        <details class="bg-cream-dark">
+          <summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none">
+            <span class="font-sans text-navy font-medium text-sm pr-4">Czy obsługujecie klientów spoza Warszawy?</span>
+            <span class="faq-icon text-gold text-xl font-light shrink-0" aria-hidden="true">+</span>
+          </summary>
+          <p class="font-sans text-navy/60 text-sm leading-relaxed px-5 pb-5">
+            Tak. Prowadzimy sprawy na terenie całej Polski. Konsultacje online (Teams / Zoom) są
+            standardową formą kontaktu dla klientów z innych miast.
+          </p>
+        </details>
+
+        <details class="bg-cream-dark">
+          <summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none">
+            <span class="font-sans text-navy font-medium text-sm pr-4">Jakie są formy wynagrodzenia?</span>
+            <span class="faq-icon text-gold text-xl font-light shrink-0" aria-hidden="true">+</span>
+          </summary>
+          <p class="font-sans text-navy/60 text-sm leading-relaxed px-5 pb-5">
+            Oferujemy ryczałt miesięczny (abonament) dla firm, stawkę godzinową oraz wynagrodzenie
+            success fee w sprawach odszkodowawczych. Model rozliczenia ustalamy indywidualnie.
+          </p>
+        </details>
+
+        <details class="bg-cream-dark">
+          <summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none">
+            <span class="font-sans text-navy font-medium text-sm pr-4">Czy zapewniacie poufność sprawy?</span>
+            <span class="faq-icon text-gold text-xl font-light shrink-0" aria-hidden="true">+</span>
+          </summary>
+          <p class="font-sans text-navy/60 text-sm leading-relaxed px-5 pb-5">
+            Absolutnie. Tajemnica zawodowa radcy prawnego i adwokata jest chroniona przez prawo
+            i stanowi fundament naszej działalności.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       KONTAKT / FORMULARZ
+  ================================================ -->
+  <section id="kontakt" class="bg-navy py-16 lg:py-24 relative overflow-hidden">
+    <div class="absolute -bottom-20 -left-20 w-56 h-56 rounded-full border border-gold/8" aria-hidden="true"></div>
+    <div class="absolute -top-10 -right-10 w-80 h-80 rounded-full border border-gold/5 hidden lg:block" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="lg:flex lg:gap-20">
+
+        <!-- Left: contact info -->
+        <div class="lg:w-80 lg:shrink-0 mb-10 lg:mb-0">
+          <span class="divider-gold mb-4" aria-hidden="true"></span>
+          <p class="section-label text-gold/60 mb-3">Kontakt</p>
+          <h2 class="font-serif text-cream text-3xl lg:text-4xl font-bold leading-snug mb-3">
+            Skonsultuj swoją sprawę
+          </h2>
+          <p class="font-sans text-cream/50 text-sm mb-8">
+            Odpowiemy w ciągu 24 godzin roboczych.
+          </p>
+
+          <div class="flex flex-col gap-3">
+            <a href="tel:+48221234567" class="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition">
+              <span class="text-gold" aria-hidden="true">&#9742;</span>
+              <span class="font-sans text-cream/80 text-sm">+48 22 123 45 67</span>
+            </a>
+            <a href="mailto:kontakt@lawandpartners.pl" class="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition">
+              <span class="text-gold font-bold" aria-hidden="true">@</span>
+              <span class="font-sans text-cream/80 text-sm">kontakt@lawandpartners.pl</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="flex-1">
+
+          <div
+            id="form-success"
+            class="hidden bg-gold/20 border border-gold/40 text-gold font-sans text-sm px-5 py-4 mb-6"
+            role="alert"
+            aria-live="polite"
+          >
+            Dziękujemy! Wiadomość została wysłana. Odpiszemy w ciągu 24 godzin roboczych.
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="flex flex-col gap-5">
+
+              <div>
+                <label for="name" class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">
+                  Imię i nazwisko <span class="text-gold" aria-label="pole wymagane">*</span>
+                </label>
+                <input
+                  type="text" id="name" name="name"
+                  placeholder="Jan Kowalski"
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="name-error"
+                  class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition"
+                />
+                <p id="name-error" class="hidden font-sans text-red-400 text-xs mt-1.5" role="alert"></p>
+              </div>
+
+              <div>
+                <label for="email" class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">
+                  E-mail <span class="text-gold" aria-label="pole wymagane">*</span>
+                </label>
+                <input
+                  type="email" id="email" name="email"
+                  placeholder="jan@firma.pl"
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="email-error"
+                  class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition"
+                />
+                <p id="email-error" class="hidden font-sans text-red-400 text-xs mt-1.5" role="alert"></p>
+              </div>
+
+              <div>
+                <label for="phone" class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">Telefon</label>
+                <input
+                  type="tel" id="phone" name="phone"
+                  placeholder="+48 600 000 000"
+                  autocomplete="tel"
+                  class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition"
+                />
+              </div>
+
+              <div>
+                <label for="area" class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">
+                  Dziedzina prawa <span class="text-gold" aria-label="pole wymagane">*</span>
+                </label>
+                <select
+                  id="area" name="area"
+                  aria-required="true"
+                  aria-describedby="area-error"
+                  class="w-full bg-navy border border-white/15 text-cream font-sans text-sm px-4 py-3 transition appearance-none cursor-pointer"
+                >
+                  <option value="" disabled selected>Wybierz...</option>
+                  <option value="gospodarcze">Prawo gospodarcze i korporacyjne</option>
+                  <option value="pracy">Prawo pracy</option>
+                  <option value="cywilne">Prawo cywilne i procesowe</option>
+                  <option value="nieruchomosci">Prawo nieruchomości</option>
+                  <option value="rodo">RODO i ochrona danych</option>
+                  <option value="inne">Inne</option>
+                </select>
+                <p id="area-error" class="hidden font-sans text-red-400 text-xs mt-1.5" role="alert"></p>
+              </div>
+
+              <div>
+                <label for="message" class="block font-sans text-cream/60 text-xs uppercase tracking-widest mb-1.5">
+                  Opis sprawy <span class="text-gold" aria-label="pole wymagane">*</span>
+                </label>
+                <textarea
+                  id="message" name="message"
+                  rows="4"
+                  placeholder="Krótko opisz swoją sytuację..."
+                  aria-required="true"
+                  aria-describedby="message-error"
+                  class="w-full bg-white/5 border border-white/15 text-cream font-sans text-sm px-4 py-3 placeholder:text-cream/25 transition resize-none"
+                ></textarea>
+                <p id="message-error" class="hidden font-sans text-red-400 text-xs mt-1.5" role="alert"></p>
+              </div>
+
+              <div>
+                <div class="flex items-start gap-3">
+                  <input
+                    type="checkbox" id="rodo" name="rodo"
+                    class="mt-0.5 accent-gold w-4 h-4 shrink-0 cursor-pointer"
+                    aria-required="true"
+                    aria-describedby="rodo-error"
+                  />
+                  <label for="rodo" class="font-sans text-cream/45 text-xs leading-relaxed cursor-pointer">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z Polityką Prywatności kancelarii.
+                    <span class="text-gold" aria-label="pole wymagane">*</span>
+                  </label>
+                </div>
+                <p id="rodo-error" class="hidden font-sans text-red-400 text-xs mt-1.5" role="alert"></p>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-primary w-full active:scale-95"
+              >
+                Wyślij zapytanie
+              </button>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+<footer class="bg-navy-dark py-12 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="lg:flex lg:items-start lg:justify-between gap-12 mb-8">
+
+      <div class="mb-8 lg:mb-0">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-gold font-serif text-2xl font-bold" aria-hidden="true">L&amp;P</span>
+          <div>
+            <p class="font-serif text-cream text-sm font-semibold leading-none">Law &amp; Partners</p>
+            <p class="font-sans text-cream/40 text-xs">Kancelaria Prawna</p>
+          </div>
+        </div>
+        <address class="not-italic flex flex-col gap-1">
+          <p class="font-sans text-cream/50 text-xs">ul. Nowy Świat 18/3, 00-001 Warszawa</p>
+          <p class="font-sans text-cream/50 text-xs">pon. – pt. 9:00 – 18:00</p>
+        </address>
+      </div>
+
+      <nav aria-label="Nawigacja w stopce">
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 list-none m-0 p-0">
+          <li><a href="#uslugi"    class="font-sans text-cream/50 text-xs hover:text-gold transition">Usługi</a></li>
+          <li><a href="#portfolio" class="font-sans text-cream/50 text-xs hover:text-gold transition">Portfolio</a></li>
+          <li><a href="#opinie"    class="font-sans text-cream/50 text-xs hover:text-gold transition">Opinie</a></li>
+          <li><a href="#faq"       class="font-sans text-cream/50 text-xs hover:text-gold transition">FAQ</a></li>
+          <li><a href="#kontakt"   class="font-sans text-cream/50 text-xs hover:text-gold transition">Kontakt</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <span class="divider-gold mb-5" aria-hidden="true"></span>
+
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+      <p class="font-sans text-cream/30 text-xs">&copy; 2025 Law &amp; Partners. Wszelkie prawa zastrzeżone.</p>
+      <a href="#" class="font-sans text-cream/30 text-xs hover:text-gold transition">Polityka prywatności</a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

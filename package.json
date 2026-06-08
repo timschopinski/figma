@@ -1,12 +1,14 @@
 {
-  "name": "figma",
+  "name": "law-partners",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Law & Partners – landing page kancelarii prawnej",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run dev\" \"npx serve public -l 3000\"",
+    "dev": "tailwindcss -i ./css/input.css -o ./public/css/style.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./public/css/style.css --minify && cp ./js/main.js ./public/js/main.js && cp ./index.html ./public/index.html"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "tailwindcss": "^3.4.0"
+  }
 }

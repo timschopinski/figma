@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts ──────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ── Reusable components ───────────────────────────────────── */
+@layer components {
+  .divider-gold {
+    @apply block w-12 h-0.5 bg-gold;
+  }
+
+  .btn-primary {
+    @apply bg-gold text-navy font-sans font-semibold text-sm tracking-wide uppercase
+           text-center py-4 px-8 transition hover:bg-gold-dark;
+  }
+
+  .btn-outline {
+    @apply border border-gold/40 text-gold font-sans font-medium text-sm tracking-wide uppercase
+           text-center py-3.5 px-8 transition hover:border-gold hover:bg-gold/5;
+  }
+
+  .section-label {
+    @apply font-sans text-xs tracking-widest uppercase;
+  }
+
+  .service-card {
+    @apply bg-cream-dark px-5 py-6;
+    border-left: 2px solid transparent;
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+
+  .service-card:hover {
+    border-left-color: theme('colors.gold.DEFAULT');
+    background-color: #E5DFD2;
+  }
+
+  .field-error {
+    border-color: theme('colors.red.500') !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15) !important;
+  }
+}
+
+/* ── Animations ────────────────────────────────────────────── */
+@layer utilities {
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up  { animation: fadeUp 0.7s ease forwards; }
+  .delay-1  { animation-delay: 0.15s; }
+  .delay-2  { animation-delay: 0.30s; }
+  .delay-3  { animation-delay: 0.45s; }
+}
+
+/* ── Form inputs ───────────────────────────────────────────── */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: theme('colors.gold.DEFAULT');
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.18);
+}
+
+/* ── FAQ accordion ─────────────────────────────────────────── */
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition: transform 0.25s ease;
+}
